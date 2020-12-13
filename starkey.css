@@ -1,0 +1,390 @@
+body {
+	font-family: 'Mr Eaves XL Sans', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+	color: #4a4a4a;
+}
+/*грід на весь ленд*/
+.grid{
+    width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 150px;
+}
+/* самий верхній*/
+.header{
+    grid-area:1/1/2/-1;
+    margin: 0;
+    
+}
+.contact{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    flex-basis: 100%;
+}
+.contact img{
+    height: 60px;
+    padding-bottom: 1rem;   
+}
+
+.contact a{
+    color: #4a4a4a;
+    margin-top: 2rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+/*сфмий центральний з внутрішнім грідом*/
+.main{
+    grid-area: 2/1/3/-1;
+}
+
+/* підвал */
+.footer{
+    grid-area:3/1/4/-1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+/*грід вбудований в мейн*/
+.sub-grig{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  repeat(7, minmax(auto, 700px));  
+    gap: 10px;  
+}
+/* секція 1*/
+.svg{
+    height: 70vh;
+    grid-area: 1/1/2/-1;
+    background-image: url(img1.png);
+    background-size: cover;
+}
+.livioEdgeAi{
+    padding-top: 10%;
+    padding-left: 10%;
+}
+/* секція 2*/
+.section2{
+    height: 60vh;
+    grid-area: 2/1/3/-1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.img-fluid{
+    width: 100%;
+    height: auto;
+}
+.picBox{
+    flex-basis: auto;
+    max-width: 40%;
+    height: auto;
+}
+.textBox{
+    flex-basis: auto;
+    max-width: 40%;
+    height: auto;
+}
+/* секція 3*/
+.videobox{
+    height: 60vh;
+    grid-area: 3/1/4/-1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.videoBoxLeft {
+    box-sizing: border-box;
+    background-image: url(videoscreenL.png);
+    background-size: cover;
+    align-content: center; 
+    width: 80%;
+    height: 80%;
+    margin: 1rem;
+}
+.videoBoxRight{
+    box-sizing: border-box;
+    background-image: url(videoscreenR.png);
+    background-size: cover;
+    align-content: center; 
+    width: 80%;
+    height: 80%;
+    margin: 1rem;
+}
+.videoBoxLeft h3,
+.videoBoxRight h3{
+        width: 80%;
+        margin-left: 10%;
+        font-size: 2.2rem;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 2px 11px rgba(0,0,0,.5);
+}
+.play-icon {
+	display: block;
+	width: 6vw;
+	height: 6vw;
+	margin-top: 1vw;
+	margin-left: 20vw;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+.play-icon:hover{
+	background-color: #fff;
+}
+/* секція 4*/
+.features{
+    grid-area: 4/1/5/-1; 
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px dotted  #4a4a4a;
+}
+.picBox1{
+    flex-basis: auto;
+    max-width: 40%;
+    height: auto;
+}
+.textBox1{
+    flex-basis: auto;
+    max-width: 40%;
+    height: auto;
+}
+/* секція 5*/
+.carousel{
+    grid-area: 5/1/6/-1;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.carousel-button{
+    flex-basis: 70%;
+    max-width: 70%;
+    height: auto;
+    margin-left: 3%;
+}
+.carousel-pic{
+    flex-basis: auto;
+    max-width: 40%;
+    height: auto;
+    justify-self: end;
+    }
+.carousel-pic img{
+    margin-left: 20%;
+    max-width: 50%;
+}
+.slick-dots{
+  column-count: 2;
+  /* list-style: none; */
+}
+
+.slick-dots li{
+        min-height: 14px;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        color: #4a4a4a;
+        font-weight: normal;
+        text-align: left;
+        padding-left: 10px;
+        cursor: pointer;
+        
+} 
+.svg-wrap{
+    display: inline-block;
+    text-align: center;
+}
+
+/* секція 6*/
+.thriveApp{
+    grid-area: 6/1/7/-1;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thrive-left{
+    box-sizing: border-box;
+    border-right: 5px solid #fff;
+    background-image: url(pic2.png), linear-gradient(90deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+    background-color: #4a4a4a;
+    background-size: cover;
+    flex-basis: 49%;
+    height: 80vh;
+    
+}
+.thrive-right{
+    box-sizing: border-box;
+    border-left: 5px solid #fff;
+    background-image:url("thrive-care.png"),linear-gradient(180deg, #ededed 0%, #c8c8c8 100%);
+    background-size: cover;
+    flex-basis: 49%;
+    align-content: center;
+    height: 80vh;
+}
+.thrive-left img{
+    width: 150px;
+}
+.thrive-left p{
+    color: wheat;
+}
+.thrive-right img{
+    width: 230px;
+}
+.textBox2{
+    padding-top: 5%;
+    padding-left: 10%;
+    width: 80%;
+}
+/* секція 7*/
+.banner{
+    grid-area: 7/1/8/-1;
+    height: 60vh;
+    background-image: url(try-livio-edge-ai.jpg);
+    background-size: cover;
+}
+.textBanner{
+    padding-top: 10%;
+    padding-left: 20%;
+    text-align: start;
+    width: 30%;
+}
+/* окремі заголовки*/   
+.livioEdgeAi h2 {   
+        max-width: 400px;
+        margin-bottom: 2rem;
+        font-family: 'Mr Eaves XL Sans', Arial, sans-serif;
+        letter-spacing: 0.1rem;
+        font-weight: 300;
+        font-size: 2.2rem;
+        line-height: 1.5;
+        color: #1e9be9;
+    }
+main h3 {
+        margin-bottom: 16px;
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 1;
+        color: #1e9be9; 
+    }
+main p, main li {
+        font-family: 'DIN Next', Arial, sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.3;
+        color: #4a4a4a;
+        margin-bottom: 1.8rem;
+        text-align: left;
+}
+        
+.inter a {        
+         background-image: url("USflag.png");
+        background-repeat: no-repeat;
+         margin: 5rem auto 0;
+         padding-left: 3rem;
+         background-position: 0 0;
+        background-size: 1.8rem;
+        line-height: 2.5rem;
+        color: #4a4a4a; 
+        text-decoration: none; 
+}
+
+/*socials іконки*/
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 1px;
+    border-radius: 20%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+    background: #c2311d;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  @media only screen and (max-width: 568px){
+    .grid{
+        width: 100vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto;
+    }
+    .sub-grig{
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows:  repeat(7, auto);  
+        
+    }
+    .svg{
+        width: 100vw;
+        background-image:none;
+    }
+    .section2, .videobox, .features, .carousel, .thriveApp {
+        display: flex;
+        flex-direction: column;
+      }
+          .livioEdgeAi h2{
+        font-size: 16px;
+        color: red;
+    }
+    h2 {font-size:1.25rem; color: red; }
+    .logo img{
+        width: 100vw;
+    }
+    main h3{
+        font-size: 1.5rem;
+        color: red;
+    }
+    p{
+        font-size: 15px;
+    }
+    .picBox{        
+        max-width: 100vw;
+        height: auto;
+        align-items: center;
+    }
+    .textBox{
+        max-width: 100vw;
+        height: auto;
+        margin: 1rem 1rem;
+    }
+    .contact{
+        flex-direction: column;
+        align-self: center;   
+    }
+    .videoBoxLeft, .videoBoxRight{
+        max-width: 100vw;
+        height: 50wh;
+        margin: 1rem 1rem;
+        align-content: center;
+    }
+
+  }
+  
